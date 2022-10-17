@@ -99,10 +99,10 @@
 		B428DCBA28E4F45E0070CA83 /* chuckNorrisMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				B4E7649F28E4FEE70089F2D7 /* Delegates */,
 				B428DCED28E4F99D0070CA83 /* ViewModel */,
 				B428DCEC28E4F98E0070CA83 /* View */,
 				B428DCEB28E4F97B0070CA83 /* Model */,
-				B428DCBD28E4F45E0070CA83 /* SceneDelegate.swift */,
 				B428DCC128E4F45E0070CA83 /* Main.storyboard */,
 				B428DCC428E4F4600070CA83 /* Assets.xcassets */,
 				B428DCC628E4F4600070CA83 /* LaunchScreen.storyboard */,
@@ -151,6 +151,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		B4E7649F28E4FEE70089F2D7 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				B428DCBD28E4F45E0070CA83 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -161,6 +169,7 @@
 				B428DCB428E4F45E0070CA83 /* Sources */,
 				B428DCB528E4F45E0070CA83 /* Frameworks */,
 				B428DCB628E4F45E0070CA83 /* Resources */,
+				B4E7649E28E4FB2D0089F2D7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -276,6 +285,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B4E7649E28E4FB2D0089F2D7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B428DCB428E4F45E0070CA83 /* Sources */ = {
