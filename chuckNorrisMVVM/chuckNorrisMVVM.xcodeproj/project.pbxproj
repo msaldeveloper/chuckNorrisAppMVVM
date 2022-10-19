@@ -16,6 +16,8 @@
 		B428DCD328E4F4600070CA83 /* chuckNorrisMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B428DCD228E4F4600070CA83 /* chuckNorrisMVVMTests.swift */; };
 		B428DCDD28E4F4600070CA83 /* chuckNorrisMVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B428DCDC28E4F4600070CA83 /* chuckNorrisMVVMUITests.swift */; };
 		B428DCDF28E4F4600070CA83 /* chuckNorrisMVVMUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B428DCDE28E4F4600070CA83 /* chuckNorrisMVVMUITestsLaunchTests.swift */; };
+		B43621D728FDE7DF00E785F2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B43621D628FDE7DF00E785F2 /* Alamofire */; };
+		B43621DA28FF69C700E785F2 /* anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43621D928FF69C700E785F2 /* anchors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		B428DCD828E4F4600070CA83 /* chuckNorrisMVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chuckNorrisMVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B428DCDC28E4F4600070CA83 /* chuckNorrisMVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chuckNorrisMVVMUITests.swift; sourceTree = "<group>"; };
 		B428DCDE28E4F4600070CA83 /* chuckNorrisMVVMUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chuckNorrisMVVMUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B43621D928FF69C700E785F2 /* anchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = anchors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B43621D728FDE7DF00E785F2 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +103,7 @@
 		B428DCBA28E4F45E0070CA83 /* chuckNorrisMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				B43621D828FF69A400E785F2 /* Utils */,
 				B4E7649F28E4FEE70089F2D7 /* Delegates */,
 				B428DCED28E4F99D0070CA83 /* ViewModel */,
 				B428DCEC28E4F98E0070CA83 /* View */,
@@ -151,6 +156,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		B43621D828FF69A400E785F2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B43621D928FF69C700E785F2 /* anchors.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		B4E7649F28E4FEE70089F2D7 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +189,9 @@
 			dependencies = (
 			);
 			name = chuckNorrisMVVM;
+			packageProductDependencies = (
+				B43621D628FDE7DF00E785F2 /* Alamofire */,
+			);
 			productName = chuckNorrisMVVM;
 			productReference = B428DCB828E4F45E0070CA83 /* chuckNorrisMVVM.app */;
 			productType = "com.apple.product-type.application";
@@ -248,6 +264,9 @@
 				Base,
 			);
 			mainGroup = B428DCAF28E4F45E0070CA83;
+			packageReferences = (
+				B43621D528FDE7DF00E785F2 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = B428DCB928E4F45E0070CA83 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -313,6 +332,7 @@
 			files = (
 				B428DCC028E4F45E0070CA83 /* ViewController.swift in Sources */,
 				B428DCBC28E4F45E0070CA83 /* AppDelegate.swift in Sources */,
+				B43621DA28FF69C700E785F2 /* anchors.swift in Sources */,
 				B428DCBE28E4F45E0070CA83 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -655,6 +675,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B43621D528FDE7DF00E785F2 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B43621D628FDE7DF00E785F2 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B43621D528FDE7DF00E785F2 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B428DCB028E4F45E0070CA83 /* Project object */;
 }
