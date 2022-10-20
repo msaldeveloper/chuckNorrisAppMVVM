@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B401E77A28FF8FAF00C4844B /* chuckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B401E77928FF8FAF00C4844B /* chuckModel.swift */; };
+		B401E77E2901DC4F00C4844B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B401E77D2901DC4F00C4844B /* Localizable.strings */; };
 		B428DCBC28E4F45E0070CA83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B428DCBB28E4F45E0070CA83 /* AppDelegate.swift */; };
 		B428DCBE28E4F45E0070CA83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B428DCBD28E4F45E0070CA83 /* SceneDelegate.swift */; };
 		B428DCC028E4F45E0070CA83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B428DCBF28E4F45E0070CA83 /* ViewController.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B401E77928FF8FAF00C4844B /* chuckModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chuckModel.swift; sourceTree = "<group>"; };
+		B401E77D2901DC4F00C4844B /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		B428DCB828E4F45E0070CA83 /* chuckNorrisMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chuckNorrisMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B428DCBB28E4F45E0070CA83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B428DCBD28E4F45E0070CA83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B401E77B2901DC1400C4844B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				B401E77C2901DC2A00C4844B /* localizables */,
+				B428DCC428E4F4600070CA83 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		B401E77C2901DC2A00C4844B /* localizables */ = {
+			isa = PBXGroup;
+			children = (
+				B401E77D2901DC4F00C4844B /* Localizable.strings */,
+			);
+			path = localizables;
+			sourceTree = "<group>";
+		};
 		B428DCAF28E4F45E0070CA83 = {
 			isa = PBXGroup;
 			children = (
@@ -103,13 +124,13 @@
 		B428DCBA28E4F45E0070CA83 /* chuckNorrisMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				B401E77B2901DC1400C4844B /* Assets */,
 				B43621D828FF69A400E785F2 /* Utils */,
 				B4E7649F28E4FEE70089F2D7 /* Delegates */,
 				B428DCED28E4F99D0070CA83 /* ViewModel */,
 				B428DCEC28E4F98E0070CA83 /* View */,
 				B428DCEB28E4F97B0070CA83 /* Model */,
 				B428DCC128E4F45E0070CA83 /* Main.storyboard */,
-				B428DCC428E4F4600070CA83 /* Assets.xcassets */,
 				B428DCC628E4F4600070CA83 /* LaunchScreen.storyboard */,
 				B428DCC928E4F4600070CA83 /* Info.plist */,
 			);
@@ -136,6 +157,7 @@
 		B428DCEB28E4F97B0070CA83 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B401E77928FF8FAF00C4844B /* chuckModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -284,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B428DCC828E4F4600070CA83 /* LaunchScreen.storyboard in Resources */,
+				B401E77E2901DC4F00C4844B /* Localizable.strings in Resources */,
 				B428DCC528E4F4600070CA83 /* Assets.xcassets in Resources */,
 				B428DCC328E4F45E0070CA83 /* Main.storyboard in Resources */,
 			);
@@ -330,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B401E77A28FF8FAF00C4844B /* chuckModel.swift in Sources */,
 				B428DCC028E4F45E0070CA83 /* ViewController.swift in Sources */,
 				B428DCBC28E4F45E0070CA83 /* AppDelegate.swift in Sources */,
 				B43621DA28FF69C700E785F2 /* anchors.swift in Sources */,
