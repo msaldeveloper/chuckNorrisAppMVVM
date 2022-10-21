@@ -14,6 +14,11 @@ class ViewController: UIViewController {
     var image : UIImageView?
     var button : UIButton?
     
+    //variable para suscriptor
+    private var chuckviewModel = ChuckViewModel()
+    // cancelable para suscriptor
+    private var cancellables : [AnyCancellable] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.lightGray
@@ -28,7 +33,7 @@ class ViewController: UIViewController {
     }
     func titleLabelText(){
         titleLabel = UILabel()
-        titleLabel?.text = "ChukNorris API"
+        titleLabel?.text = NSLocalizedString("welcomeScreen.appName", comment: "app name")
         titleLabel?.font = UIFont.init(name: "bold", size: 22)
         titleLabel?.backgroundColor = .clear
         titleLabel?.textAlignment = .center
@@ -38,7 +43,7 @@ class ViewController: UIViewController {
     
     func descriptionLabelText(){
         descriptionLabel = UILabel()
-        descriptionLabel?.text = "frases de CHUCK NORRIS"
+        descriptionLabel?.text = NSLocalizedString("welcomeScreen.title", comment: "title")
         descriptionLabel?.font = UIFont.init(name: "bold", size: 30)
         descriptionLabel?.backgroundColor = .clear
         descriptionLabel?.textAlignment = .center
@@ -66,10 +71,23 @@ class ViewController: UIViewController {
     func accessButton(){
         button = UIButton()
         button?.backgroundColor = UIColor(red: 109/255, green: 69/255, blue: 223/255, alpha: 1)
-        button?.setTitle("Buscar", for: .normal)
+        button?.setTitle(NSLocalizedString("welcomeScreen.findButton.text", comment: "button text") , for: .normal)
         button?.layer.cornerRadius = 10
         view.addSubview(button!)
         button?.addAnchorsAndSize(width: nil, height: 50, left: 10, top: 140, right: 10, bottom: nil, withAnchor: .top, relativeToView: image)
+        let tapSearcherButton = UITapGestureRecognizer(target: self, action: #selector(buttonAction))
+        button?.addGestureRecognizer(tapSearcherButton)
+    }
+    
+    @objc func buttonAction(){
+        let resposeViewController = ResponseViewController()
+        present(resposeViewController,animated: true,completion:{print("register button press validated")} )
+        }
+    
+
+    
+    func actionButton(){
+        
     }
 
 
