@@ -9,11 +9,12 @@ import Foundation
 import Alamofire
 import Combine
 
-let urlBase = "\(urls.base())\(urls.tipeJoke.random)"
+let urlBase = "\(urls.base.urlBase)\(urls.tipeJoke.random)"
 
 
-class dataResponse {
+class DataResponse {
     func chuckDataResponse() -> DataResponsePublisher<chuckModel> {
+        print("urlBase:",urlBase)
         return AF
             .request(urlBase, method: .get)
             .response { fulldata in

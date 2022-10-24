@@ -13,11 +13,15 @@ class ViewController: UIViewController {
     var descriptionLabel : UILabel?
     var image : UIImageView?
     var button : UIButton?
+    var responseViewController = ResponseViewController()
     
     //variable para suscriptor
     private var chuckviewModel = ChuckViewModel()
+    
     // cancelable para suscriptor
     private var cancellables : [AnyCancellable] = []
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,9 +84,11 @@ class ViewController: UIViewController {
     }
     
     @objc func buttonAction(){
+        //responseViewController.userLogin()
         let resposeViewController = ResponseViewController()
         present(resposeViewController,animated: true,completion:{print("register button press validated")} )
         }
+    
     
 
     
