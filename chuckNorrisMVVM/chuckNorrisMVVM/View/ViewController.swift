@@ -13,6 +13,17 @@ class ViewController: UIViewController {
     var descriptionLabel : UILabel?
     var image : UIImageView?
     var button : UIButton?
+    var responseViewController = ResponseViewController()
+    var categoriesBox : UITextField = UITextField()
+    var categoriesField: UIView?
+    
+    //variable para suscriptor
+    private var chuckviewModel = ChuckViewModel()
+    
+    // cancelable para suscriptor
+    private var cancellables : [AnyCancellable] = []
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,10 +36,11 @@ class ViewController: UIViewController {
         descriptionLabelText()
         logoImages()
         accessButton()
+        categoriesTextBox()
     }
     func titleLabelText(){
         titleLabel = UILabel()
-        titleLabel?.text = "ChukNorris API"
+        titleLabel?.text = NSLocalizedString("welcomeScreen.appName", comment: "app name")
         titleLabel?.font = UIFont.init(name: "bold", size: 22)
         titleLabel?.backgroundColor = .clear
         titleLabel?.textAlignment = .center
@@ -38,7 +50,7 @@ class ViewController: UIViewController {
     
     func descriptionLabelText(){
         descriptionLabel = UILabel()
-        descriptionLabel?.text = "frases de CHUCK NORRIS"
+        descriptionLabel?.text = NSLocalizedString("welcomeScreen.title", comment: "title")
         descriptionLabel?.font = UIFont.init(name: "bold", size: 30)
         descriptionLabel?.backgroundColor = .clear
         descriptionLabel?.textAlignment = .center
@@ -66,10 +78,37 @@ class ViewController: UIViewController {
     func accessButton(){
         button = UIButton()
         button?.backgroundColor = UIColor(red: 109/255, green: 69/255, blue: 223/255, alpha: 1)
-        button?.setTitle("Buscar", for: .normal)
+        button?.setTitle(NSLocalizedString("welcomeScreen.findButton.text", comment: "button text") , for: .normal)
         button?.layer.cornerRadius = 10
         view.addSubview(button!)
         button?.addAnchorsAndSize(width: nil, height: 50, left: 10, top: 140, right: 10, bottom: nil, withAnchor: .top, relativeToView: image)
+        let tapSearcherButton = UITapGestureRecognizer(target: self, action: #selector(buttonAction))
+        button?.addGestureRecognizer(tapSearcherButton)
+    }
+    
+    func categoriesTextBox(){
+        categoriesField = UIView()
+        categoriesField?.tintColor = UIColor.red
+        view.addSubview(categoriesField!)
+        categoriesField?.addAnchorsAndSize(width: nil, height:nil, left: 21, top: 10 , right: 21, bottom: nil, withAnchor: .top, relativeToView: button)
+                
+                
+        
+               
+    }
+
+    
+    @objc func buttonAction(){
+        //responseViewController.userLogin()
+        let resposeViewController = ResponseViewController()
+        present(resposeViewController,animated: true,completion:{print("register button press validated")} )
+        }
+    
+    
+
+    
+    func actionButton(){
+         
     }
 
 

@@ -1,0 +1,10 @@
+/*
+  Localizable.strings
+  chuckNorrisMVVM
+
+  Created by Mario Alberto Saldana Martinez on 20/10/22.
+  
+*/
+"welcomeScreen.appName" = "ChukNorris API";
+"welcomeScreen.title" = "frases de CHUCK NORRIS";
+"welcomeScreen.findButton.text" = "Buscar";
