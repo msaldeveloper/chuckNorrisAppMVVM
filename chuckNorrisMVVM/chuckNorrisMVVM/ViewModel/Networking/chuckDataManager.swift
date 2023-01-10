@@ -16,7 +16,7 @@ class DataResponse {
     func chuckDataResponse() -> DataResponsePublisher<chuckModel> {
         print("urlBase:",urlBase)
         return AF
-            .request(urlBase, method: .get)
+            .request(urlBase,method: .get)
             .response { fulldata in
                 debugPrint(fulldata)
             }

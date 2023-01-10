@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     var image : UIImageView?
     var button : UIButton?
     var responseViewController = ResponseViewController()
+    var categoriesBox : UITextField = UITextField()
+    var categoriesField: UIView?
     
     //variable para suscriptor
     private var chuckviewModel = ChuckViewModel()
@@ -34,6 +36,7 @@ class ViewController: UIViewController {
         descriptionLabelText()
         logoImages()
         accessButton()
+        categoriesTextBox()
     }
     func titleLabelText(){
         titleLabel = UILabel()
@@ -83,6 +86,18 @@ class ViewController: UIViewController {
         button?.addGestureRecognizer(tapSearcherButton)
     }
     
+    func categoriesTextBox(){
+        categoriesField = UIView()
+        categoriesField?.tintColor = UIColor.red
+        view.addSubview(categoriesField!)
+        categoriesField?.addAnchorsAndSize(width: nil, height:nil, left: 21, top: 10 , right: 21, bottom: nil, withAnchor: .top, relativeToView: button)
+                
+                
+        
+               
+    }
+
+    
     @objc func buttonAction(){
         //responseViewController.userLogin()
         let resposeViewController = ResponseViewController()
@@ -93,7 +108,7 @@ class ViewController: UIViewController {
 
     
     func actionButton(){
-        
+         
     }
 
 
